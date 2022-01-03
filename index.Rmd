@@ -37,7 +37,7 @@ output:
   distill::distill_article:
     toc: TRUE
     toc_depth: 3
-    code_folding: TRUE
+    code_folding: FALSE
   toc_float: TRUE
 # share: [twitter, facebook, linkedin]
 csl: elsevier-harvard
@@ -77,7 +77,16 @@ The current version of WOODAN relies on a MySQL database, whilst the website use
 
 ## Database structure
 
-In the database, each object is assigned a unique identifier, which serves as the key to link to a rich set of meta-data associated with the find. The meta-data includes information on the level of (1) the object itself, (2) the context and (3) the archaeological site or find-location (ESM Table 1).
+In the database, each object is assigned a unique identifier, which serves as the key to link to a rich set of meta-data associated with the find. The meta-data includes information on the level of (1) the object itself, (2) the context and (3) the archaeological site or find-location (Table \@ref(tab:table-1)).
+
+```{r table-1}
+
+library(readxl)
+
+opts <- options(knitr.kable.NA = "")
+
+knitr::kable(read_xlsx("./figures/table_1.xlsx"), caption = "Overview of most important meta-data fields associated with each wooden object or element in WOODAN.")
+```
 
 The object itself is first described by its dimensions, completeness, natural state of preservation, degree of biological degradation and current state of conservation. A text field can complement the registered properties with specific details. At this level the taxonomic identification of the wood species is recorded, both by its botanical and vernacular name, and related to the name of the wood specialist who performed the analysis. Finally the current location of the object and preservation method or treatment is listed.
 
@@ -118,16 +127,12 @@ Currently (26/07/2021), WOODAN hosts 2155 objects, of which 89 are composite obj
 knitr::include_graphics("./figures/ESM_figure_01.jpg")
 ```
 
-
 Only few objects have been radiocarbon dated or have a felling date established by tree-ring analysis. Therefore the age of the majority of the objects is based on associated finds or the cultural period assigned to the archaeological feature or site where the object was found. WOODAN is currently dominated by finds from the Middle Ages (n = 874), followed by Roman (n = 395) and Iron age (n = 354) objects (Fig. \@ref(fig:ESM-fig-2). A limited number of finds (n = 3) are associated with a very narrow time window -- the First World War (1914-1918) -- and were found along the former battlefield in western Flanders [@haneca2018].
-
 
 ```{r ESM-fig-2, fig.cap='Number of wooden objects (n = 2155) assigned to a specific cultural period'}
 
 knitr::include_graphics("./figures/ESM_figure_02.jpg")
 ```
-
-
 
 # Scientific value
 
@@ -158,5 +163,3 @@ In 2018 the database has been accommodated within the WOODAN Foundation ([info\@
 On the longer perspective, a richly filled database with wooden archaeological objects and associated taxonomic identifications would stimulate more detailed research on a (supra-) regional or international scale. To facilitate this, WOODAN has already become a multi-lingual platform on which users can search for objects or object groups in four languages (Dutch, English, French and German).
 
 We hope this platform will stimulate the inclusion and appreciation of wood technological and botanical research on wooden objects into archaeological projects. Furthermore, this repository, as it can be easily browsed, could serve as a platform to create more awareness and interest for archaeological wooden heritage towards a broad audience.
-
-
