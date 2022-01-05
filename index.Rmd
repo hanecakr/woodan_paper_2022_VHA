@@ -82,10 +82,24 @@ In the database, each object is assigned a unique identifier, which serves as th
 ```{r table-1, layout="l-body-outset"}
 
 library(readxl)
-
-opts <- options(knitr.kable.NA = "")
-
-knitr::kable(read_xlsx("./figures/table_1.xlsx"), caption = "Overview of most important meta-data fields associated with each wooden object or element in WOODAN.", full_width = F)
+library(DT)
+t <- read_xlsx("./figures/table_1.xlsx")
+# paged_table(t)
+datatable(t,
+  caption = "Table 1: Overview of most important meta-data fields associated with each wooden object or element in WOODAN.",
+  extensions = "FixedHeader",
+  options = list(
+    autoWidth = TRUE,
+    pageLength = 36,
+    rownames = FALSE,
+    scrollX = TRUE, 
+    paging=TRUE,
+    fixedHeader=TRUE,
+    dom = 't'))
+# 
+# opts <- options(knitr.kable.NA = "")
+# 
+# knitr::kable(read_xlsx("./figures/table_1.xlsx"), caption = "Overview of most important meta-data fields associated with each wooden object or element in WOODAN.", full_width = F)
 ```
 
 The object itself is first described by its dimensions, completeness, natural state of preservation, degree of biological degradation and current state of conservation. A text field can complement the registered properties with specific details. At this level the taxonomic identification of the wood species is recorded, both by its botanical and vernacular name, and related to the name of the wood specialist who performed the analysis. Finally the current location of the object and preservation method or treatment is listed.
