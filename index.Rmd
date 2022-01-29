@@ -1,15 +1,19 @@
 ---
 title: "WOODAN: an online database of archaeological wooden objects"
 description: |
-  Authors' version of the paper to be published in *Vegetation History & Archaeobotany*. ESM are included in the main body of the text
+  Authors' version of the paper published in *Vegetation History & Archaeobotany*. This version includes figures in the main body of the text that in the original publication are part of the ESM.  <br>  
+  Please cite as: *Haneca K., Deforce K., van der Laan J., Nicolaij S. & Lange S. 2022: WOODAN: an online database of archaeological wooden objects, Vegetation History and Archaeobotany, doi: https://doi.org/10.1007/s00334-022-00868-z. *
+
 author:
   - name: Kristof Haneca 
     affiliation: Flanders Heritage Agency
+    affiliation_url: https://www.onroerenderfgoed.be/
     orcid_id: 0000-0002-7719-8305
   - name: Koen Deforce   
     affiliation: | 
       Royal Belgian Institute of Natural Sciences, OD Earth and History of Life <br>
       Ghent University, Archaeology Department
+    affiliation_url: https://research.flw.ugent.be/nl/archaeo
     orcid_id: 0000-0003-3075-2564
   - first_name: Jelte
     last_name: van der Laan   
@@ -17,31 +21,34 @@ author:
     affiliation: |
       Cambium Botany, archaeobotanical research <br>
       Woodan Foundation
+    affiliation_url: https://www.cambiumbotany.nl/
   - name: Stephan Nicolaij   
     url: 
     affiliation: | 
       Qursi Software <br>
       Woodan Foundation
+    affiliation_url: https://www.qursi.nl/
   - name: Silke Lange   
     affiliation: |
       BIAX Consult <br>
       Woodan Foundation
+    affiliation_url: https://www.biax.nl/medewerkers/25/drs_silke_lange
 
 journal_title: "Vegetation History & Archaeobotany"
-volume: "in press"
+volume: "x"
 issue: "x"
-doi: ""
+doi: "10.1007/s00334-022-00868-z"
 base_url: https://hanecakr.github.io/woodan_paper_2022_VHA/
-date: 1-1-2022
+date: 2022-01-29
 output:
   distill::distill_article:
     toc: TRUE
     toc_depth: 3
     code_folding: FALSE
   toc_float: TRUE
-# share: [twitter, facebook, linkedin]
+share: [twitter, facebook, linkedin]
 csl: elsevier-harvard
-citation: FALSE
+citation: TRUE
 bibliography: woodan_references.bib
 ---
 
@@ -51,7 +58,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Abstract
 
-WOODAN is an online database developed to gather, present and analyse research results on archaeological wooden artefacts [[www.woodan.org](http://www.woodan.org)]. The database was released in 2017 and now contains over 2150 wooden objects found in the Netherlands and Belgium during archaeological excavations, covering finds from the Mesolithic up to the modern era (First World War). For *c.* 85% of these artefacts the wood species was identified and registered in the database. Furthermore, detailed meta-data is linked to the records, making WOODAN an excellent resource for finding comparable items and to study wood selection and craftsmanship throughout human history.
+WOODAN is an online database developed to gather, present and analyse research results on archaeological wooden artefacts [[www.woodan.org](http://www.woodan.org)]. The database was released in 2017 and now contains over 2150 wooden objects found during archaeological excavations in the Netherlands and Belgium, covering finds from the Mesolithic up to the modern era (First World War). For *c.* 85% of these artefacts the wood species was identified and registered in the database. Furthermore, detailed meta-data is linked to the records, making WOODAN an excellent resource for finding comparable items and to study wood selection and craftsmanship throughout human history.
 
 WOODAN is accessible through a highly intuitive website which allows users to query the entire database. When a query is performed the results are instantly analysed (frequency of wood species used; number of objects for each chronological period), mapped (the geographical distribution of the finds) and visually presented in an interactive display (photo's, 3D-models). An export function allows to further analyse the search results -- based on the available meta-data -- tailored to specific research questions.
 
@@ -59,13 +66,13 @@ Although WOODAN currently contains items from The Netherlands and Belgium only, 
 
 # Introduction
 
-Wood is the most important renewable raw material throughout human history. Material culture, starting from early prehistory, relied on the ability to fell trees and shrubs and transform the wood into tools and objects used in daily life and architectural constructions providing shelter or a living space. Although wood is a complex organic material -- physically, chemically and as a biological tissue -- it has always been shaped and worked into new applications or it served as the basic raw material for technological innovations [@conard2020; @rybníek2018; @tegel2012]. This transformation process itself relied on technical knowledge and skill, and required apt knowledge of the physical, mechanical and aesthetical properties of the wide range of wood species available [@haneca2020; @klein2016; @lange2017]. The study of archaeological wooden objects combined with taxonomic identifications therefore allows us to document and answer questions about our cultural past, the organization and technological craftmanship of (pre)historical societies and past forest management practices in general. In addition, this information can contribute to our understanding of the distribution of tree species in the past, including their introduction by humans, and on the import of wood as a raw material in specific regions.
+Wood is the most important renewable raw material throughout human history. Material culture, starting from early prehistory, relied on the ability to fell trees and shrubs and to transform the wood into tools and objects used in daily life and architectural constructions providing shelter or a living space. Although wood is a complex organic material -- physically, chemically and as a biological tissue -- it has always been shaped and worked into new applications or it served as the basic raw material for technological innovations [@conard2020; @rybníek2018; @tegel2012]. This transformation process itself relied on technical knowledge and skill, and required apt knowledge of the physical, mechanical and aesthetical properties of the wide range of wood species available [@haneca2020; @klein2016; @lange2017]. The study of archaeological wooden objects combined with taxonomic identifications therefore allows us to document and answer questions about our cultural past, the organization and technological craftmanship of (pre)historical societies and past forest management practices in general. In addition, this information can contribute to our understanding of the distribution of tree species in the past, including their introduction by humans, and on the import of wood as a raw material in specific regions.
 
 Uncharred, archaeological wooden objects are only rarely preserved in the subsoil. Except for extremely wet or dry conditions, wood rapidly decays in most soil environments because of bacterial and fungal deterioration and oxidation. Under waterlogged conditions, archaeological wooden objects can be preserved for centuries. Degradation is then reduced to bacterial erosion of the cell walls, a process that advances slowly [@klaassen2012], creating favourable conditions for the preservation of wooden objects. Under relatively dry conditions, close contact with metal objects can inhibit wood degradation as well and -- through the process of mineralization -- result in the (partial) preservation of wooden objects [@tegel2016a; @haneca2020]. In addition, wood can be preserved in extremely cold and/or dry conditions, such as glaciers and hyper-arid desert environments [@blanchette2000]. When such ancient objects are found, recorded and stored for further study and/or conservation, this provides a window of opportunity to gain more insight in the technological skill of the woodworker and the vegetation type the raw material originates from. Although the anatomical structure of wood essentially provides information on the functioning of trees and forests as biological systems [@beeckman2016], the study of the internal structure of a worked piece of wood or wooden object allows to identify the species. Then the relation between the function of the object and the mechanical, technical or aesthetical properties of the wood species can be studied. When, in addition to wood species and wood use, the context in which the specific object was found is also known, the linkages between the wooden object, its function and deposit can be better understood as well (e.g. barrels re-used as well linings or wooden idols as (ritual) offerings in peat bogs).
 
 Many taxonomic identifications on archaeological or museal wooden objects are only mentioned in reports that are often not publicly available or restricted to a footnote in elaborated archaeological reports. Therefore it is often hard to compile a substantial dataset on the wood species used for related or contemporary objects. Clearly, there is a need to develop a central repository to store, document and query the scattered finds of wooden archaeological objects in a standardized format. To fulfil this need, the WOODAN initiative was launched in 2015, as a follow-up of a project financed by the Cultural Heritage Agency of the Netherlands. The goal of this project was to provide a complete overview of all wooden artefacts found during archaeological excavations in the Netherlands, from 1997 onwards (i.e. the start of the implementation of development-led archaeology according to the Valletta Convention). The resulting catalogue and analyses were published by @lange2017a. Where this book focusses primarily on categorizing and describing the many archaeological wooden finds, WOODAN was launched as an easy-to-use and online reference catalogue. In 2018 the database was embedded into the independent and newly established WOODAN Foundation (the name WOODAN refers to the Wodan-initiative in which from 2007 onwards Dutch and Irish wood specialists developed a database for wood and charcoal finds from archaeological contexts [@stuijts2011; @stuijts2010]). The newly established WOODAN Foundation is a non-profit organization with two main objectives: (1) to collect and publish information about wooden archaeological finds, and (2) to stimulate research on wooden archaeological objects.
 
-Within the field of vegetation history and archaeobotany, several databases exist for datasets on pollen (e.g. European Pollen Database [@fyfe2009]; African Pollen Database [@vincens2007]) and botanical macro remains, both from archaeological sites (e.g. ArboDat [@kreuz2002]; RADAR [@vanhaaster1995]; ABCD [@tomlinson1996], and natural quaternary deposits (e.g. Late Quaternary plant macrofossil database for northern Eurasia [@binney2009]); enabling studies based on large sets of data and on large geographical scales, both in palaeoclimatology and palaeoecology [e.g. @bartlein2011; @gajewski2008; @prentice2000] and archaeobotany [e.g. @deforce2019; @vanderveen2008]. For archaeological wooden objects, no such databases existed up to now or was limited to a selection of old objects [<http://oldestwoodenobjects.net/>], hampering the study of wood use spanning different chronological periods and on a larger regional scale than individual sites or small regions.
+Within the field of vegetation history and archaeobotany, several databases exist for datasets on pollen (e.g. European Pollen Database [@fyfe2009]; African Pollen Database [@vincens2007]) and botanical macro remains, both from archaeological sites (e.g. ArboDat [@kreuz2002]; RADAR [@vanhaaster1995]; ABCD [@tomlinson1996], and natural quaternary deposits (e.g. Late Quaternary plant macrofossil database for northern Eurasia [@binney2009]); enabling studies based on large sets of data and on large geographical scales, both in palaeoclimatology and palaeoecology [e.g. @bartlein2011; @gajewski2008; @prentice2000] and archaeobotany [e.g. @deforce2019; @vanderveen2008]. For archaeological wooden objects, no such databases existed up to now or was limited to a selection of oldest objects [<http://oldestwoodenobjects.net/>], hampering the study of wood use spanning different chronological periods and on a larger regional scale than individual sites or small regions.
 
 As sharing, citation and reuse of data are key aspects to make archaeological and archaeobotanical research truly reproducible [@lodwick2019], WOODAN - as a publicly accessible repository - is able to facilitate the assessment of research findings and the reuse of data in meta-analysis.
 
@@ -119,7 +126,7 @@ Furthermore, bibliographic reference fields can be used to guide the user to the
 
 As images are often the first and foremost piece of information a user of WOODAN is confronted with, it is highly promoted to add one or multiple images/drawings (and the associated copyright) of the find to the database (Fig. \@ref(fig:fig-1)).
 
-```{r fig-1, fig.cap = "a) Iron age ladle, made of alder, Heemskerk-Beverwijk, The Netherlands, id: 16152000 (© Raf Timmermans); (b) Roman period disk wheel, oak, Sint-Denijs-Westrem, Belgium, id: 18009000 (© GATE bvba | J. Hoorne); (c) Roman period wax tablet, Silver fir, Alphen a/d Rijn, The Netherlands, id: 16201000 (© René Reijnen, Radboud University); (d) spoke wheel from the Late Middle Ages, oak, Kolham, The Netherlands, id: 16205000 (© Henk Faber Bulthuis); (e) 17th century spoon, boxwood, Ghent, Belgium, id: 21244000 (© BAAC Vlaanderen); (f) medieval plate with engravings on the bottom, beech, Antwerp, Belgium, id: 18012000 (© Flanders Heritage Agency)."}
+```{r fig-1, layout="l-body-outset", fig.cap = "a) Iron age ladle, made of alder, Heemskerk-Beverwijk, The Netherlands, id: 16152000 (© Raf Timmermans); (b) Roman period disk wheel, oak, Sint-Denijs-Westrem, Belgium, id: 18009000 (© GATE bvba | J. Hoorne); (c) Roman period wax tablet, Silver fir, Alphen a/d Rijn, The Netherlands, id: 16201000 (© René Reijnen, Radboud University); (d) spoke wheel from the Late Middle Ages, oak, Kolham, The Netherlands, id: 16205000 (© Henk Faber Bulthuis); (e) 17th century spoon, boxwood, Ghent, Belgium, id: 21244000 (© BAAC Vlaanderen); (f) medieval plate with engravings on the bottom, beech, Antwerp, Belgium, id: 18012000 (© Flanders Heritage Agency)."}
 
 knitr::include_graphics("./figures/Figure_01.jpg")
 ```
@@ -128,7 +135,7 @@ knitr::include_graphics("./figures/Figure_01.jpg")
 
 A general search field allows to query WOODAN based on generic or highly specific terms. In the advanced search form multiple terms can be combined. This allows to query WOODAN in relation to specific research questions. A query results in a list of filtered objects that can be viewed in a tabular format, as a tiled view of images or as a map showing the locations of the finds. When a query is performed the results are thus instantly analysed (frequency of wood species used; number of objects for each chronological period), mapped (the geographical distribution of the finds) and visually presented in an interactive display (photo's, 3D-models). In Figure \@ref(fig:fig-2) some screenshots are presented of WOODAN when a query for the object type 'bowl' was performed.
 
-```{r fig-2, fig.cap='Screenshots of the WOODAN interface [[www.woodan.org](http://www.woodan.org)] showing the result of a query for the object type *bowl*, both as an overview table, a distribution map of the find locations, a mosaic of images and drawings, a bar graph showing the number of finds for each cultural period, and an example of a detailed information page for one specific object.'}
+```{r fig-2, layout="l-body-outset", fig.cap='Screenshots of the WOODAN interface [[www.woodan.org](http://www.woodan.org)] showing the result of a query for the object type *bowl*, both as an overview table, a distribution map of the find locations, a mosaic of images and drawings, a bar graph showing the number of finds for each cultural period, and an example of a detailed information page for one specific object.'}
 
 knitr::include_graphics("./figures/Figure_02.jpg")
 ```
@@ -139,7 +146,7 @@ An export function allows to further analyse the search results -- based on the 
 
 Currently (26/07/2021), WOODAN hosts 2155 objects, of which 89 are composite objects made of multiple elements and different wood species. In total 2279 elements are recorded. These finds originate from 390 different find locations in The Netherlands and Belgium (Fig. \@ref(fig:ESM-fig-1)). Few of them are related to finds situated off-coast in the North Sea.
 
-```{r ESM-fig-1, fig.cap='Find locations (n = 390) of wooden objects (n = 2155) currently hosted in WOODAN. Diameter of the circles is proportional to the number of objects recorded for that particular location.',}
+```{r ESM-fig-1, fig.cap='Find locations (n = 390) of wooden objects (n = 2155) currently hosted in WOODAN. Diameter of the circles is proportional to the number of objects recorded for that particular location.'}
 
 knitr::include_graphics("./figures/ESM_figure_01.jpg")
 ```
@@ -159,12 +166,14 @@ Most common wood species used for making wooden objects are alder (*Alnus* sp.),
 
 Rare wood species seem to be related to specific types of objects. Yew (*Taxus baccata*) for instance is often related to the manufactory of stave buckets, cups and bows, whilst box (*Buxus sempervirens*) is almost strictly used for making combs. Nonetheless, when differentiating among cultural periods it is noted that buckets made of *Taxus* nearly exclusively occur on early medieval sites; a new tradition which disappears again in the High Middle Ages (Fig. \@ref(fig:ESM-fig-3)).
 
+
 ```{r ESM-fig-3, fig.cap='Wood species used for making buckets during Roman and medieval times, as listed in WOODAN.'}
 
 knitr::include_graphics("./figures/ESM_figure_03.jpg")
 ```
 
 Even from this first screening of the current content of WOODAN it becomes clear that the exploitation of the wood species differs among cultural periods. Furthermore it is apparent that composite objects with multiple parts and wood species become increasingly important from Roman times onwards. Beech was not used for making objects before the Late Iron Age, which concurs with the paleoecology and late recolonization of this thermophilic species since the last glacial period.
+
 
 ```{r fig-3, fig.cap='Occurrence of wood species used for creating objects or specific components, across cultural periods. The first line shows the number of composite objects made of multiple elements and wood species.', layout="l-body-outset"}
 
@@ -175,7 +184,7 @@ As such, WOODAN allows both professional users and the interested public to find
 
 # Outlook
 
-In 2018 the database has been accommodated within the WOODAN Foundation ([info\@woodan.org](mailto:info@woodan.org)) and in 2019 Flanders Heritage Agency joined the project. Currently the database is fed with archaeological objects from Belgium and the Netherlands on which wood species identification was performed. The goal is to further expand WOODAN with wooden objects and their taxonomic identifications. WOODAN aims at becoming a sustainable repository for taxonomic identifications of (pre-)historical wooden objects excavated during archaeological fieldwork or from museum collections. Not only for the Low Countries, but we hope other European institutes, wood specialists and archaeologists outside the current geographical range of WOODAN will join this initiative. Interested parties who a willing to contribute to the further development of the database are encouraged to contact the authors. We are aware that data entry and curation requires the input of experts -- both in wood science as archaeology or cultural studies -- and is highly time-consuming. To tackle this, the WOODAN Foundation is actively applying for project funding to local authorities and strives to co-operate with archaeological depots and (scientific) institutes. As of October 2021, a proposal to catalogue and synthesize archaeological wooden objects found during development-led projects in Flanders was granted by Flanders Heritage Agency. This will allow to further expand and develop WOODAN, and to launch an online module to facilitate direct data entry of wooden items into the database. Data contributors will then be able to directly enter information on analysed wooden objects into the WOODAN database. A review committee will cross-check and validate new entries before they become visible online in the database.
+In 2018 the database has been accommodated within the WOODAN Foundation ([info\@woodan.org](mailto:info@woodan.org)) and in 2019 Flanders Heritage Agency joined the project. Currently the database is fed with archaeological objects from Belgium and the Netherlands on which wood species identification was performed. The goal is to further expand WOODAN with wooden objects and their taxonomic identifications. WOODAN aims at becoming a sustainable repository for taxonomic identifications of (pre-)historical wooden objects excavated during archaeological fieldwork or from museum collections. The database is not only intended for the Low Countries, but we hope other European institutes, wood specialists and archaeologists outside the current geographical range of WOODAN will join this initiative. Interested parties who a willing to contribute to the further development of the database are encouraged to contact the authors. We are aware that data entry and curation requires the input of experts -- both in wood science as archaeology or cultural studies -- and is highly time-consuming. To tackle this, the WOODAN Foundation is actively applying for project funding to local authorities and strives to co-operate with archaeological depots and (scientific) institutes. As of October 2021, a proposal to catalogue and synthesize archaeological wooden objects found during development-led projects in Flanders was granted by Flanders Heritage Agency. This will allow to further expand and develop WOODAN, and to launch an online module to facilitate direct data entry of wooden items into the database. Data contributors will then be able to directly enter information on analysed wooden objects into the WOODAN database. A review committee will cross-check and validate new entries before they become visible online in the database.
 
 On the longer perspective, a richly filled database with wooden archaeological objects and associated taxonomic identifications would stimulate more detailed research on a (supra-) regional or international scale. To facilitate this, WOODAN has already become a multi-lingual platform on which users can search for objects or object groups in four languages (Dutch, English, French and German).
 
