@@ -1,7 +1,7 @@
 ---
 title: "WOODAN: an online database of archaeological wooden objects"
 description: |
-  Authors' version of the paper published in *Vegetation History & Archaeobotany*. This version includes figures in the main body of the text that in the original publication are part of the ESM.  <br>  
+  Author's version of the paper first published in *Vegetation History & Archaeobotany*. This version includes figures in the main body of the text that in the original publication are part of the ESM.  <br>  
   Please cite as: *Haneca K., Deforce K., van der Laan J., Nicolaij S. & Lange S. 2022: WOODAN: an online database of archaeological wooden objects, Vegetation History and Archaeobotany, doi: https://doi.org/10.1007/s00334-022-00868-z. *
 
 author:
